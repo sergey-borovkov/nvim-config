@@ -4,6 +4,7 @@
 -- Set to "basedpyright" to use basedpyright instead of pyright.
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.lazyvim_python_lsp = "basedpyright"
+vim.opt.relativenumber = true
 
 local opt = vim.opt
 opt.grepprg = "rg --vimgrep --smart-case"
