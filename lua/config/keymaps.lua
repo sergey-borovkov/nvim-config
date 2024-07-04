@@ -3,5 +3,3 @@
 -- Add any additional keymaps here
 --
 vim.keymap.set("n", "<leader>fh", ":Telescope harpoon marks<CR>", { desc = "Harpoon Marks" })
-
-map({ "n" }, "<leader>ga", vim.require("blam").peek, { desk = "Blame" })
