@@ -28,3 +28,5 @@ _G.custom_statuscolumn = function()
 end
 
 vim.opt.statuscolumn = "%!v:lua.custom_statuscolumn()"
+
+vim.opt.inccommand = "split"
