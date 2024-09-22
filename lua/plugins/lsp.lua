@@ -8,9 +8,9 @@ return {
         end,
       },
       inlay_hints = { enabled = true },
-      codelens = {
-        enabled = true,
-      },
+      -- codelens = {
+      --   enabled = true,
+      -- },
     },
     servers = {
       pyright = {

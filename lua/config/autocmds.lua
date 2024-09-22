@@ -3,7 +3,6 @@
 -- Add any additional autocmds here
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
-
 local view_group = augroup("auto_view", { clear = true })
 
 autocmd({ "BufWinLeave", "BufWritePost", "WinLeave" }, {
@@ -11,7 +10,11 @@ autocmd({ "BufWinLeave", "BufWritePost", "WinLeave" }, {
   group = view_group,
   callback = function(args)
     if vim.b[args.buf].view_activated then
-      vim.cmd.mkview({ mods = { emsg_silent = true } })
+      -- Add a check for buffer's window count
+      local win_count = vim.fn.winnr("$")
+      if win_count > 0 then
+        vim.cmd.mkview({ mods = { emsg_silent = true } })
+      end
     end
   end,
 })
