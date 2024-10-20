@@ -4,6 +4,9 @@ return {
     formatters_by_ft = {
       toml = { "taplo" },
       sh = { "shfmt" },
+      --python = { "black" },
+
+      python = { "ruff_format" },
     },
     formatters = {
       taplo = {
