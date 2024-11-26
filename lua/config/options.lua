@@ -11,22 +11,4 @@ local opt = vim.opt
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-local lazyvim_statuscolumn = require("lazyvim.util").ui.statuscolumn
-
-_G.custom_statuscolumn = function()
-  local result = lazyvim_statuscolumn()
-  local lnum = vim.v.lnum
-  local relnum = vim.v.relnum
-
-  -- Use relative number, but show absolute number for the current line
-  local number = relnum == 0 and lnum or relnum
-
-  -- Replace %l with our calculated number
-  result = result:gsub("%%l", string.format("%d", number))
-
-  return result
-end
-
-vim.opt.statuscolumn = "%!v:lua.custom_statuscolumn()"
-
 vim.opt.inccommand = "split"
