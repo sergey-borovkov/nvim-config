@@ -5,6 +5,7 @@ return {
       toml = { "taplo" },
       sh = { "shfmt" },
       python = { "ruff_format" },
+      cmake = { "cmake_format" },
     },
     formatters = {
       taplo = {
@@ -19,6 +20,11 @@ return {
         inherit = false,
         command = "shfmt",
         args = { "-i", "2", "-filename", "$FILENAME" },
+      },
+      cmake_format = {
+        command = "cmake-format",
+        args = { "-" },
+        stdin = true,
       },
     },
   },
