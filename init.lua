@@ -8,4 +8,5 @@ vim.g.cmp_widths = {
   menu = 100,
 }
 
-vim.opt.spell = true
+vim.opt.spell = false
+vim.opt.clipboard = "unnamed,unnamedplus"
