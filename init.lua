@@ -9,4 +9,4 @@ vim.g.cmp_widths = {
 }
 
 vim.opt.spell = false
-vim.opt.clipboard = "unnamed,unnamedplus"
+vim.opt.clipboard = "unnamedplus"
