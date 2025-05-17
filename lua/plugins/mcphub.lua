@@ -5,6 +5,12 @@ return {
   },
   opts = {
     use_bundled_binary = true, -- Use bundled mcp-hub binary
+    extensions = {
+      avante = {
+        make_slash_commands = true, -- make /slash commands from MCP server prompts
+      },
+    },
+    auto_approve = true, -- auto approve all prompts
   },
   -- uncomment the following line to load hub lazily
   cmd = "MCPHub", -- lazy load

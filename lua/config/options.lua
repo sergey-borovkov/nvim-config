@@ -11,4 +11,6 @@ local opt = vim.opt
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-vim.opt.inccommand = "split"
+vim.g.mcphub_auto_approve = true
+opt.inccommand = "split"
+opt.laststatus = 3
