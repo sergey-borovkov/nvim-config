@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader><leader>l", require("smart-splits").swap_buf_right)
 vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>ae", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
 vim.cmd([[cab cc CodeCompanion]])
+
+vim.keymap.set("n", "<leader>fp", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+end, { desc = "Copy full file path to clipboard" })
